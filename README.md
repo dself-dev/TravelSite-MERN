@@ -1,146 +1,230 @@
-# Travlr Full-Stack Web Application
+# Travlr Getaways – Full-Stack Travel Management Application
 
-Travlr is a full-stack travel website developed as part of a Full Stack Development course. The application uses Node.js and Express for server-side functionality and Handlebars for rendering dynamic views.
+Travlr Getaways is a full-stack web application built with **Node.js**, **Express.js**, **MongoDB**, **Mongoose**, and **Handlebars**. The application demonstrates server-side web development, RESTful API design, database integration, and dynamic content rendering using the **Model-View-Controller (MVC)** architecture.
 
-The project demonstrates foundational full-stack development concepts, including backend routing, middleware, server-side templating, static asset management, error handling, and organized application structure.
+Travel package information is stored in MongoDB, retrieved through REST API endpoints, and dynamically rendered to users through reusable Handlebars templates.
+
+---
 
 ## Features
 
-* Node.js and Express server configuration
-* Server-side rendering with Handlebars
-* Modular route handling
-* Middleware integration
-* Static HTML, CSS, JavaScript, and image serving
-* Custom 404 and server error handling
-* Organized routes, views, and public asset directories
-* Responsive travel website interface
+- Full-stack web application built with Node.js and Express.js
+- MongoDB database integration using Mongoose
+- RESTful API for retrieving travel package information
+- Dynamic server-side rendering with Handlebars
+- MVC (Model-View-Controller) application architecture
+- Express middleware for request logging, cookies, JSON parsing, and serving static assets
+- Reusable Handlebars partials
+- MongoDB database seeding from JSON data
+- Modular routes, controllers, models, and views
+- Custom 404 and server error handling
+
+---
 
 ## Technologies Used
 
-* Node.js
-* Express.js
-* JavaScript
-* Handlebars
-* HTML
-* CSS
-* Morgan
-* Cookie Parser
-* Git
-* GitHub
+### Backend
+
+- Node.js
+- Express.js
+- JavaScript
+- REST APIs
+
+### Database
+
+- MongoDB
+- Mongoose
+
+### Frontend
+
+- Handlebars
+- HTML5
+- CSS3
+- JavaScript
+
+### Development Tools
+
+- Git
+- GitHub
+- npm
+- Morgan
+- Cookie Parser
+
+---
+
+## Architecture
+
+The application follows the **Model-View-Controller (MVC)** design pattern.
+
+```
+Browser
+   │
+   ▼
+Express Routes
+   │
+   ▼
+Controllers
+   │
+   ▼
+MongoDB (Mongoose)
+   │
+   ▼
+Handlebars Views
+```
+
+This architecture separates routing, business logic, data access, and presentation, making the application easier to maintain, test, and extend.
+
+---
+
+## REST API
+
+### Get All Trips
+
+```
+GET /api/trips
+```
+
+Returns all travel packages stored in MongoDB.
+
+### Get Trip by Code
+
+```
+GET /api/trips/:tripCode
+```
+
+Returns a single travel package matching the supplied trip code.
+
+---
 
 ## Project Structure
 
-```text
+```
 TravelSite-MERN/
+│
+├── app_api/
+│   ├── controllers/
+│   ├── models/
+│   └── routes/
+│
+├── app_server/
+│   ├── controllers/
+│   ├── routes/
+│   ├── views/
+│   └── models/
+│
+├── data/
+├── public/
+├── bin/
 ├── app.js
 ├── package.json
-├── package-lock.json
-├── bin/
-│   └── www
-├── public/
-│   ├── images/
-│   ├── javascripts/
-│   └── stylesheets/
-├── routes/
-│   ├── index.js
-│   └── users.js
-├── views/
-│   ├── error.hbs
-│   ├── index.hbs
-│   └── layout.hbs
 └── README.md
 ```
 
+---
+
 ## Installation
 
-### Prerequisites
-
-Before running the project, make sure the following software is installed:
-
-* Node.js
-* npm
-* Git
-
-### Clone the Repository
+Clone the repository:
 
 ```bash
 git clone https://github.com/dself-dev/TravelSite-MERN.git
 ```
 
-Move into the project directory:
+Navigate into the project:
 
 ```bash
 cd TravelSite-MERN
 ```
 
-### Install Dependencies
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-## Running the Application
+Start MongoDB.
 
-Start the application with:
+Seed the database:
+
+```bash
+node app_api/models/seed.js
+```
+
+Run the application:
 
 ```bash
 npm start
 ```
 
-Open a browser and navigate to:
+Open your browser:
 
-```text
+```
 http://localhost:3000
 ```
 
-## Available Routes
+Travel page:
 
-| Route    | Description                         |
-| -------- | ----------------------------------- |
-| `/`      | Displays the main travel website    |
-| `/users` | Returns a basic user route response |
+```
+http://localhost:3000/travel
+```
+
+REST API:
+
+```
+http://localhost:3000/api/trips
+```
+
+---
 
 ## What I Learned
 
-Through this project, I gained practical experience with:
+Through this project I gained experience with:
 
-* Creating and configuring a Node.js application
-* Building a web server with Express.js
-* Creating and managing application routes
-* Using middleware to process HTTP requests
-* Rendering server-side views with Handlebars
-* Serving static assets through Express
-* Structuring a full-stack application into logical directories
-* Handling 404 and server-side application errors
-* Managing dependencies with npm
-* Using Git and GitHub for version control
+- Building a full-stack web application using Node.js and Express.js
+- Designing and implementing RESTful APIs
+- Connecting Express applications to MongoDB using Mongoose
+- Creating Mongoose schemas and data models
+- Organizing applications using the MVC architecture
+- Building reusable server-side templates with Handlebars
+- Working with asynchronous JavaScript and database queries
+- Creating modular controllers and routes
+- Implementing middleware in Express
+- Seeding MongoDB databases from JSON data
+- Returning structured JSON responses from API endpoints
+- Using Git and GitHub for version control
+
+---
 
 ## Future Improvements
 
-This project currently demonstrates the foundational structure of a full-stack Node.js and Express application. Planned improvements include:
+Future enhancements planned for this project include:
 
-* Connecting the application to a database such as MongoDB
-* Replacing static travel package information with dynamic database content
-* Adding full create, read, update, and delete functionality
-* Creating administrative tools for managing travel packages
-* Adding user registration, login, and authentication
-* Implementing authorization for users and administrators
-* Creating RESTful API endpoints
-* Adding form validation and improved error handling
-* Improving mobile responsiveness and accessibility
-* Adding automated testing
-* Containerizing the application with Docker
-* Deploying the application to a cloud platform
-* Expanding the frontend with a modern JavaScript framework
+- Adding an Angular frontend to transition the application into a **MEAN Stack** project
+- Building full CRUD functionality for travel packages
+- Implementing JWT authentication and role-based authorization
+- Creating an administrative dashboard for managing travel packages
+- Adding user registration and account management
+- Implementing trip search, filtering, and sorting
+- Improving mobile responsiveness and accessibility
+- Containerizing the application with Docker
+- Deploying the application to AWS
+- Adding automated unit and integration testing
+- Integrating a modern frontend framework while maintaining a scalable RESTful backend architecture
+
+---
 
 ## Academic Context
 
-This application was developed as part of a Full Stack Development course. The purpose of the project was to apply server-side development concepts in a working application and demonstrate an understanding of routing, templating, middleware, error handling, and full-stack project organization.
+This application was developed as part of a Full Stack Development course to demonstrate backend development, MongoDB integration, RESTful API design, server-side rendering, middleware, and software architecture principles.
+
+---
 
 ## Author
 
 **Dennis Selfinger**
 
-* Email: [dselfinger.dev@gmail.com](mailto:dselfinger.dev@gmail.com)
-* GitHub: [dself-dev](https://github.com/dself-dev)
-* Portfolio: [dself-dev.github.io/2026_portfolio_website](https://dself-dev.github.io/2026_portfolio_website/)
+Email: dselfinger.dev@gmail.com
+
+GitHub: https://github.com/dself-dev
+
+Portfolio: https://dself-dev.github.io/2026_portfolio_website/

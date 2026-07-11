@@ -1,0 +1,31 @@
+{{> header }}
+
+<div class="container">
+  <div class="row banner-spacer">
+    <div class="col-md-6">
+      <h1>Travel</h1>
+      <p>Explore our amazing travel destinations and book your next adventure with Travlr Getaways!</p>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Featured Destinations</h2>
+    </div>
+  </div>
+  
+  <div class="row">
+    {{#each trips}}
+    <div class="col-md-4">
+      <div class="trip-card">
+        <img src="{{image}}" alt="{{name}}" class="img-responsive">
+        <h3>{{name}}</h3>
+        <p>{{description}}</p>
+        <p><strong>Price: ${{perPerson}}</strong></p>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
+
+{{> footer }}
