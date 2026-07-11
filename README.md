@@ -1,90 +1,146 @@
-## Author
+# Travlr Full-Stack Web Application
 
-**Dennis Selfinger**  
-Email: dselfinger.dev@gmail.com  
+Travlr is a full-stack travel website developed as part of a Full Stack Development course. The application uses Node.js and Express for server-side functionality and Handlebars for rendering dynamic views.
 
-Created for a Full Stack Development course.
-
-And here is the full README with your info included:
-
-# Travlr Project
-
-This project was created for a Full Stack Development course. It is a Node.js and Express web application that uses Handlebars for server-side rendering. The project demonstrates the fundamentals of backend routing, templating, middleware, and application structure in a full stack environment.
-
-## Purpose
-
-The purpose of this project was to practice building and organizing a full stack web application using Express. It also shows how static website content can be integrated into a server-based application structure.
+The project demonstrates foundational full-stack development concepts, including backend routing, middleware, server-side templating, static asset management, error handling, and organized application structure.
 
 ## Features
 
-- Express server setup
-- Handlebars view engine
-- Route handling
-- Static file serving
-- Error handling for 404 and server errors
-- Basic project organization using routes, views, and public assets
+* Node.js and Express server configuration
+* Server-side rendering with Handlebars
+* Modular route handling
+* Middleware integration
+* Static HTML, CSS, JavaScript, and image serving
+* Custom 404 and server error handling
+* Organized routes, views, and public asset directories
+* Responsive travel website interface
 
 ## Technologies Used
 
-- Node.js
-- Express
-- Handlebars (`hbs`)
-- Morgan
-- Cookie Parser
+* Node.js
+* Express.js
+* JavaScript
+* Handlebars
+* HTML
+* CSS
+* Morgan
+* Cookie Parser
+* Git
+* GitHub
 
 ## Project Structure
 
-```text id="9v11qx"
-travlr-project/
+```text
+TravelSite-MERN/
 ├── app.js
 ├── package.json
+├── package-lock.json
+├── bin/
+│   └── www
+├── public/
+│   ├── images/
+│   ├── javascripts/
+│   └── stylesheets/
 ├── routes/
 │   ├── index.js
 │   └── users.js
 ├── views/
-│   ├── index.hbs
 │   ├── error.hbs
+│   ├── index.hbs
 │   └── layout.hbs
-├── public/
-├── bin/
-│   └── www
-└── package-lock.json
-How to Run the Project
-Install dependencies:
+└── README.md
+```
+
+## Installation
+
+### Prerequisites
+
+Before running the project, make sure the following software is installed:
+
+* Node.js
+* npm
+* Git
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/dself-dev/TravelSite-MERN.git
+```
+
+Move into the project directory:
+
+```bash
+cd TravelSite-MERN
+```
+
+### Install Dependencies
+
+```bash
 npm install
-Start the application:
+```
+
+## Running the Application
+
+Start the application with:
+
+```bash
 npm start
-Open the app in your browser at:
+```
+
+Open a browser and navigate to:
+
+```text
 http://localhost:3000
-Routes
-/ — renders the main page
-/users — returns a simple text response
-What I Learned
+```
 
-Through this project, I practiced:
+## Available Routes
 
-Setting up an Express application
-Using middleware in Node.js
-Creating and managing routes
-Rendering views with Handlebars
-Organizing a full stack project into logical folders
-Handling errors in a web application
-Academic Context
+| Route    | Description                         |
+| -------- | ----------------------------------- |
+| `/`      | Displays the main travel website    |
+| `/users` | Returns a basic user route response |
 
-This application was developed as part of a Full Stack Development class project. The goal was to apply course concepts in a working web application and demonstrate understanding of server-side development patterns.
+## What I Learned
 
-Future Improvements
+Through this project, I gained practical experience with:
 
-If this project were expanded further, possible improvements could include:
+* Creating and configuring a Node.js application
+* Building a web server with Express.js
+* Creating and managing application routes
+* Using middleware to process HTTP requests
+* Rendering server-side views with Handlebars
+* Serving static assets through Express
+* Structuring a full-stack application into logical directories
+* Handling 404 and server-side application errors
+* Managing dependencies with npm
+* Using Git and GitHub for version control
 
-Adding database integration
-Creating dynamic travel package data
-Building out full CRUD functionality
-Improving the front-end styling and responsiveness
-Adding authentication and user management
-Author
+## Future Improvements
 
-Dennis Selfinger
-Email: dselfinger.dev@gmail.com
+This project currently demonstrates the foundational structure of a full-stack Node.js and Express application. Planned improvements include:
 
-Created for a Full Stack Development course.
+* Connecting the application to a database such as MongoDB
+* Replacing static travel package information with dynamic database content
+* Adding full create, read, update, and delete functionality
+* Creating administrative tools for managing travel packages
+* Adding user registration, login, and authentication
+* Implementing authorization for users and administrators
+* Creating RESTful API endpoints
+* Adding form validation and improved error handling
+* Improving mobile responsiveness and accessibility
+* Adding automated testing
+* Containerizing the application with Docker
+* Deploying the application to a cloud platform
+* Expanding the frontend with a modern JavaScript framework
+
+## Academic Context
+
+This application was developed as part of a Full Stack Development course. The purpose of the project was to apply server-side development concepts in a working application and demonstrate an understanding of routing, templating, middleware, error handling, and full-stack project organization.
+
+## Author
+
+**Dennis Selfinger**
+
+* Email: [dselfinger.dev@gmail.com](mailto:dselfinger.dev@gmail.com)
+* GitHub: [dself-dev](https://github.com/dself-dev)
+* Portfolio: [dself-dev.github.io/2026_portfolio_website](https://dself-dev.github.io/2026_portfolio_website/)
